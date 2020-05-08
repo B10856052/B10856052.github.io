@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>台灣牛點餐價格表</title>
+    <style>
+        h1,
+        h2 {
+            font-weight: bolder;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 36px;
+            color: blue
+        }
+        
+        h2 {
+            font-size: 28px;
+            color: red
+        }
+        
+        table {
+            margin: auto;
+        }
+        
+        #tableCaption {
+            border-style: dashed;
+            border-width: 1px;
+        }
+        
+        td {
+            border: 1px red dotted;
+            padding: 10px
+        }
+        
+        .content {
+            color: green;
+            font-family: Arial;
+            font-size: 18px;
+            text-align: center
+        }
+        
+        #tableTitle {
+            font-weight: bolder;
+            font-size: 18px;
+            color: purple;
+            text-align: center;
+            border: 1px purple dotted
+        }
+    </style>
+    <script>
+    </script>
+</head>
+
+<body>
+    <h1>台灣牛點餐價格表</h1>
+    <h2>折扣內容:數量為3的倍數折50</h2>
+    <script>
+        document.write('<table id="tableCaption">');
+        var t1;
+        document.write('<th>');
+        for (i = 1; i <= 5; i++) {
+            document.write('<td id="tableTitle">套餐' + i + '<br>' + (i * 50) + '元</td>');
+        }
+        document.write('</th>');
+        for (num = 1; num <= 7; num++) {
+            document.write('<tr><td id="tableTitle">' + num + '</td>');
+            for (l = 1; l <= 5; l++) {
+                if (num % 3 != 0) {
+                    document.write('<td class="content">' + (50 * num * l) + '</td>');
+                } else {
+                    document.write('<td class="content" style="color:red">原價:' + (50 * num * l) + '<br>折扣後:' + (50 * l * num - 50));
+                }
+            }
+            document.write('</tr>');
+        }
+    </script>
+</body>
+
+</html>

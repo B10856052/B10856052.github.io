@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        p {
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-weight: bolder;
+            text-align: center;
+            font-size: 36px;
+            letter-spacing: 6px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        img {
+            vertical-align: bottom;
+            padding: 20px;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .item-group {
+            width: 100%;
+            max-width: 1400px;
+            margin: auto
+        }
+        
+        .bg img {
+            width: 100%
+        }
+        
+        .footer {
+            background-color: #333;
+            color: #aaa;
+            text-align: center;
+            padding: 10px 0
+        }
+        
+        .title h2 {
+            text-align: center;
+            font-size: 46px
+        }
+        
+        .title {
+            margin: 0 0px 10px;
+            padding: 20px 10px;
+            background-color: #fff8dc;
+            text-align: center;
+        }
+        
+        .title p {
+            font-size: 22px;
+            text-align: center
+        }
+        
+        .item {
+            margin: 0 10px 20px
+        }
+        
+        .item .text h3 {
+            font-size: 24px;
+            text-align: center
+        }
+        
+        .item .pic img {
+            width: 100%;
+        }
+        
+        .two {
+            margin: 60px 0;
+            background-color: #ffa;
+        }
+        
+        @media screen and (min-width:768px) {
+            .item-group {
+                display: flex
+            }
+        }
+        
+        * {
+            /*消除網頁邊框*/
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .header {
+            height: 50px;
+            background-color: lightblue;
+            position: relative
+        }
+        
+        .btn {
+            width: 40px;
+            height: 40px;
+            background-color: lightblue;
+            display: block;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+        }
+        
+        .btn span {
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            display: block;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            left: 2px;
+            width: 36px;
+            background-color: #aaa;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            box-shadow: 0px 8px 0px #aaa, 0px -8px 0px #aaa
+        }
+        
+        nav {
+            width: 40%;
+            height: 100vh;
+            background-color: darkturquoise;
+            position: absolute;
+            top: 50px;
+            left: -100%;
+        }
+        
+        #menu {
+            position: absolute
+        }
+        
+        #menu:checked~.header nav {
+            left: 0
+        }
+        
+        @media screen and (min-width:768px) {
+            h1 {
+                font-size: 60px;
+                letter-spacing: 16px;
+            }
+            .btn {
+                display: none
+            }
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center
+            }
+            nav {
+                position: relative;
+                left: 0;
+                display: flex;
+                width: auto;
+                height: auto;
+                top: 0;
+                background-color: transparent
+            }
+        }
+        
+        a {
+            font-size: 36px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="background-color: lightblue;">
+        <h1>我玩過的遊戲介紹</h1>
+        <p>
+            我的遊戲生涯並不長只玩了５年左右<br> 但還玩了很多好玩的遊戲值得我推薦<br>(只限PC遊戲)</p>
+    </div>
+    <div class="title">
+        <p style="font-weight: bolder;font-size: 36px;">推薦遊戲</p>
+        <div class="item-group">
+            <div class="item">
+                <div class="text">
+                    <h3>冒險生存</h3>
+                    <a href="https://store.steampowered.com/app/264710/Subnautica/" target="_blank"><img src="./sub.jpg" alt="0"></a>
+                    <p>深海迷航<br>以深海為主題<br>在遊戲的氛圍設計得很好<br>玩遊戲時可以深刻的感受到身處海洋的恐懼</p>
+                    <a href="https://store.steampowered.com/app/105600/Terraria/?l=tchinese&curator_clanid=25663463" target="_blank"><img src="./terraria.jpg" alt="0"></a>
+                    <p>泰拉瑞亞<br>冒險向的遊戲自由度很高<br>在慢慢體驗遊戲的同時<br>也有各種不同的boss等著挑戰</p>
+                    <a href="https://store.steampowered.com/app/457140/Oxygen_Not_Included/" target="_blank"><img src="./oxyg.jpg" alt="0"></a>
+                    <p>缺氧<br>以生存為目的的遊戲<br>遊戲目標很簡單<br>在一顆行星內部盡可能地存活</p>
+                    <p><a href="https://store.steampowered.com/tags/zh-tw/%E5%86%92%E9%9A%AA/" target="_blank">更多</a></p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="text">
+                    <h3>競技遊戲</h3>
+                    <a href="https://store.steampowered.com/app/381210/Dead_by_Daylight/" target="_blank"><img src="./dbd.jpg" alt="0"></a>
+                    <p>黎明死線<br>為非對稱競技生存恐怖類遊戲<br>在殺手的莊園內四名人類必須修好發電機逃跑<br>而殺手的目標就是殺死闖入的人類</p>
+                    <a href="https://tw.beanfun.com/kartrider/main.aspx" target="_blank"><img src="./kart.jpg" alt="0"></a>
+                    <p>跑跑卡丁車<br>一款多人賽車遊戲<br>其有非常好的速度感<br>(該圖為正在研發的2代"跑跑:飄移")</p>
+                    <a href="https://store.steampowered.com/app/578080/PLAYERUNKNOWNS_BATTLEGROUNDS/" target="_blank"><img src="./pubg.jpg" alt="0"></a>
+                    <p>絕地求生<br>慢節奏大逃殺射擊遊戲<br>以大逃殺及真實為主軸<br>有著廣大的地圖因此一局需要快到半個小時</p>
+                    <p><a href="">更多</a></p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="text">
+                    <h3>輕鬆紓壓</h3>
+                    <a href="https://store.steampowered.com/app/751780/Forager/" target="_blank"><img src="./forager.jpg" alt="0"></a>
+                    <p>浮島物語<br>一款目標為採集所有東西的遊戲<br>其中有些小解謎跟挑戰<br>為一款很療育的輕鬆小品</p>
+                    <a href="https://store.steampowered.com/app/433340/Slime_Rancher/" target="_blank"><img src="./slime.jpg" alt="0"></a>
+                    <p>史萊姆農場<br>有著非常多各種不同的史萊姆<br>每一隻都有自己的特色非常得可愛<br>很適合喜歡可愛生物的人遊玩</p>
+                    <a href="https://store.steampowered.com/app/440820/Stardew_Valley_Soundtrack/?l=tchinese&curator_clanid=29519836" target="_blank"><img src="./far.jpg" alt="0"></a>
+                    <p>星露谷物語<br>一款非常休閒的遊戲<br>沒有目標就是純粹的休閒遊戲<br>之中可以種田釣魚與NPC互動</p>
+                    <p><a href="">更多</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
